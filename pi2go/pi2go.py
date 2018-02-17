@@ -252,7 +252,7 @@ def spinLeft(speed):
     q.ChangeDutyCycle(speed)
     a.ChangeDutyCycle(speed)
     b.ChangeDutyCycle(0)
-    q.ChangeFrequency(speed + 5)
+    q.ChangeFrequency(speed/2 + 5)
     a.ChangeFrequency(speed + 5)
     
 # spinRight(speed): Sets motors to turn opposite directions at speed. 0 <= speed <= 100
