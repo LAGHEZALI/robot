@@ -1,27 +1,3 @@
-# import RPi.GPIO as GPIO
-
-# #set GPIO numbering mode and define output pins
-# GPIO.setmode(GPIO.BOARD)
-# GPIO.setup(15,GPIO.OUT)
-
-# screen = curses.initscr()
-# curses.noecho()
-# curses.cbreak()
-# screen.keypad(True)
-
-# #gpio of servo = 15
-# p = GPIO.PWM(15,50)
-# p.start(7.5)
-
-# def middle():
-#     p.ChangeDutyCycle(7.5)
-
-# def left():
-#     p.ChangeDutyCycle(12.5) 
-
-# def right():
-#     p.ChangeDutyCycle(2.5)
-
 import pi2go, time
 
 import sys
@@ -57,20 +33,18 @@ def readkey(getchar_fn=None):
     return ord(c3) - 65  # 0=Up, 1=Down, 2=Right, 3=Left arrows
 
 pi2go.init()
-pi2go.startServod()
 
 try:
-	pi2go.setServo(15,90)
 	while True:
 		keyp = readkey()
 		if keyp == 'i':
-			pi2go.pinServod(15,90)
+			pi2go.servoMiddle()
 			print 'Servo set to Middle Position'
 		elif keyp == 'o':
-			pi2go.pinServod(15,0)
+			pi2go.servoLeft()
 			print 'Servo set to Left Position'
 		elif keyp == 'p':
-			pi2go.pinServod(15,180)
+			pi2go.servoRight()
 			print 'Servo set to Right Position'
 		elif odr(keyp) == 3:
 			break
