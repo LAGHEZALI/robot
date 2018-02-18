@@ -22,7 +22,7 @@ print "q = stop and exit"
 while True:
 	# Now we will start with a PWM signal at 50Hz at pin 18. 
 	# 50Hz should work for many servos very will. If not you can play with the frequency if you like.
-	Servo = GPIO.PWM(11, 50)						
+	Servo = GPIO.PWM(15, 50)						
 
 	# This command sets the left position of the servo
 	Servo.start(2.5)
