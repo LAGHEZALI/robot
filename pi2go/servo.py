@@ -49,11 +49,11 @@ try:
 			pi2go.servoRight()
 			print 'Servo set to Right Position'
 		
-		elif keyp == '.':
+		elif keyp == 'y':
 			cycle +=0.5
 			pi2go.setServoCycle(cycle)
 			print 'Servo Cycle ++ = ', cycle
-		elif keyp == ',':
+		elif keyp == 'u':
 			cycle -=0.5
 			pi2go.setServoCycle(cycle)
 			print 'Servo Cycle -- = ', cycle
