@@ -65,15 +65,13 @@ try:
 		keyp = readkey()
         if keyp == 'i':
         	pinServod(15,90)
-            print 'Servo set to Middle Position'
+        	print 'Servo set to Middle Position'
         elif keyp == 'o':
         	pinServod(15,0)
-            pi2go.reverse(speed)
-            print 'Servo set to Left Position'
+        	print 'Servo set to Left Position'
         elif keyp == 'p':
         	pinServod(15,180)
-            pi2go.spinRight(speed)
-            print 'Servo set to Right Position'
+        	print 'Servo set to Right Position'
 
         # elif keyp == '.' or keyp == '>':
         #     speed = min(100, speed+10)
