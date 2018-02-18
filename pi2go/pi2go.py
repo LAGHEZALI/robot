@@ -117,6 +117,7 @@ lineLeft = 12
 
 # Define servo pin
 servoPin = 15
+servo = GPIO.PWM(servoPin,50)
 
 # Define Colour IDs for the RGB LEDs (Pi2Go full only)
 Blue = 0
