@@ -34,6 +34,8 @@ def readkey(getchar_fn=None):
 
 pi2go.init()
 
+cycle = 7.5
+
 try:
 	while True:
 		keyp = readkey()
@@ -49,16 +51,19 @@ try:
 		elif odr(keyp) == 3:
 			break
 
-        # elif keyp == '.' or keyp == '>':
-        #     speed = min(100, speed+10)
-        #     print 'Speed+', speed
-        # elif keyp == ',' or keyp == '<':
-        #     speed = max (0, speed-10)
-        #     print 'Speed-', speed
+        elif keyp == '.':
+            cycle +=0.5
+            pi2go.setServoCycle(cycle)
+            print 'Servo Cycle ++ = ', cycle
+        elif keyp == ',':
+            cycle -=0.5
+            pi2go.setServoCycle(cycle)
+            print 'Servo Cycle -- = ', cycle
 
-        # elif keyp == ' ':
-        #     pi2go.stop()
-        #     print 'Stop'
+        elif keyp == ' ':
+            pi2go.stopServo()
+            print 'Stop Servo'
 
 except KeyboardInterrupt:
+	pi2go.stopServo()
     pi2go.cleanup()

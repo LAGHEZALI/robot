@@ -231,15 +231,6 @@ def version():
 #
 # stop(): Stops both motors
 
-def servoMiddle():
-    servo.ChangeDutyCycle(7.5)
-
-def servoLeft():
-    servo.ChangeDutyCycle(12.5) 
-
-def servoRight():
-    servo.ChangeDutyCycle(2.5)
-
 def stop():
     p.ChangeDutyCycle(0)
     q.ChangeDutyCycle(0)
@@ -552,3 +543,26 @@ def stopServod():
     os.system("sudo pkill -f servod")
     ServosActive = False
         
+#   My servo Functions
+
+def servoMiddle():
+    servo.ChangeDutyCycle(7.5)
+
+def servoLeft():
+    servo.ChangeDutyCycle(12.5) 
+
+def servoRight():
+    servo.ChangeDutyCycle(2.5)
+
+def stopServo():
+    servo.stop()
+
+# def setServo(radius):
+#     if radius<0:
+#         servo.ChangeDutyCycle(12.5)
+#     elif radius>180:
+#         servo.ChangeDutyCycle(2.5)
+#     else:
+
+def setServoCycle(cycle):
+    servo.ChangeDutyCycle(cycle)
