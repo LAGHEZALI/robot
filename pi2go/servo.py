@@ -41,13 +41,16 @@ try:
 	while True:
 		keyp = readkey()
 		if keyp == 'i':
-			pi2go.setServo(50)
+			position = 50
+			pi2go.setServo(position)
 			print 'Servo set to Middle Position'
 		elif keyp == 'o':
-			pi2go.setServo(0)
+			position = 0
+			pi2go.setServo(position)
 			print 'Servo set to Left Position'
 		elif keyp == 'p':
-			pi2go.setServo(100)
+			position = 100
+			pi2go.setServo(position)
 			print 'Servo set to Right Position'
 		
 		elif keyp == 'y':
