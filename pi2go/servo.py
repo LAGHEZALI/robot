@@ -34,7 +34,7 @@ def readkey(getchar_fn=None):
 
 pi2go.init()
 
-cycle = 7.5
+position = 50 # between 0 and 100
 
 try:
 	while True:
@@ -50,13 +50,13 @@ try:
 			print 'Servo set to Right Position'
 		
 		elif keyp == 'y':
-			cycle +=0.5
+			cycle +=10
 			pi2go.setServoCycle(cycle)
-			print 'Servo Cycle ++ = ', cycle
+			print 'Servo Position ++ = ', cycle
 		elif keyp == 'u':
-			cycle -=0.5
+			cycle -=10
 			pi2go.setServoCycle(cycle)
-			print 'Servo Cycle -- = ', cycle
+			print 'Servo Position -- = ', cycle
 		elif keyp == ' ':
 			pi2go.stopServo()
 			print 'Stop Servo'

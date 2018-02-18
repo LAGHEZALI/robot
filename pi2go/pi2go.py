@@ -557,12 +557,13 @@ def servoRight():
 def stopServo():
     servo.stop()
 
-# def setServo(radius):
-#     if radius<0:
-#         servo.ChangeDutyCycle(12.5)
-#     elif radius>180:
-#         servo.ChangeDutyCycle(2.5)
-#     else:
-
 def setServoCycle(cycle):
     servo.ChangeDutyCycle(cycle)
+
+def setServo(radius):
+    if radius<0:
+        servo.ChangeDutyCycle(3)
+    elif radius>100:
+        servo.ChangeDutyCycle(12.5)
+    else:
+        servo.ChangeDutyCycle(radius*0.095+3)
