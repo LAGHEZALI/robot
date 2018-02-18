@@ -117,7 +117,6 @@ lineLeft = 12
 
 # Define servo pin
 servoPin = 15
-servo =  None
 
 # Define Colour IDs for the RGB LEDs (Pi2Go full only)
 Blue = 0
@@ -165,9 +164,6 @@ def init():
     GPIO.setup(irFR, GPIO.IN) # Right obstacle sensor
     GPIO.setup(irMID, GPIO.IN) # Centre Front obstacle sensor
 
-    #Set up servo pin
-    GPIO.setup(servoPin,GPIO.OUT)
-
     #use pwm on inputs so motors don't go too fast
     GPIO.setup(L1, GPIO.OUT)
     p = GPIO.PWM(L1, 20)
@@ -185,6 +181,8 @@ def init():
     b = GPIO.PWM(R2, 20)
     b.start(0)
 
+    #Set up servo pin
+    GPIO.setup(servoPin,GPIO.OUT)
     servo = GPIO.PWM(servoPin,50)
     servo.start(7.5)
 
@@ -232,6 +230,16 @@ def version():
 # (both versions)
 #
 # stop(): Stops both motors
+
+def servoMiddle():
+    servo.ChangeDutyCycle(7.5)
+
+def servoLeft():
+    servo.ChangeDutyCycle(12.5) 
+
+def servoRight():
+    servo.ChangeDutyCycle(2.5)
+
 def stop():
     p.ChangeDutyCycle(0)
     q.ChangeDutyCycle(0)
@@ -544,21 +552,3 @@ def stopServod():
     os.system("sudo pkill -f servod")
     ServosActive = False
         
-
-
-
-
-
-
-
-
-#   My servo functions
-
-def servoMiddle():
-    servo.ChangeDutyCycle(7.5)
-
-def servoLeft():
-    servo.ChangeDutyCycle(12.5) 
-
-def servoRight():
-    servo.ChangeDutyCycle(2.5)
