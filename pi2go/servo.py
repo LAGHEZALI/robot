@@ -48,22 +48,22 @@ try:
 		elif keyp == 'p':
 			pi2go.servoRight()
 			print 'Servo set to Right Position'
+		
+		elif keyp == '.':
+			cycle +=0.5
+			pi2go.setServoCycle(cycle)
+			print 'Servo Cycle ++ = ', cycle
+		elif keyp == ',':
+			cycle -=0.5
+			pi2go.setServoCycle(cycle)
+			print 'Servo Cycle -- = ', cycle
+		elif keyp == ' ':
+			pi2go.stopServo()
+			print 'Stop Servo'
+		
 		elif odr(keyp) == 3:
 			break
 
-        elif keyp == '.':
-            cycle +=0.5
-            pi2go.setServoCycle(cycle)
-            print 'Servo Cycle ++ = ', cycle
-        elif keyp == ',':
-            cycle -=0.5
-            pi2go.setServoCycle(cycle)
-            print 'Servo Cycle -- = ', cycle
-
-        elif keyp == ' ':
-            pi2go.stopServo()
-            print 'Stop Servo'
-
 except KeyboardInterrupt:
 	pi2go.stopServo()
-    pi2go.cleanup()
+	pi2go.cleanup()
