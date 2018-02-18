@@ -117,7 +117,7 @@ lineLeft = 12
 
 # Define servo pin
 servoPin = 15
-servo
+servo =  None
 
 # Define Colour IDs for the RGB LEDs (Pi2Go full only)
 Blue = 0
