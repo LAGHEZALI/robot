@@ -50,11 +50,11 @@ try:
 			pi2go.setServo(100)
 			print 'Servo set to Right Position'
 		
-		elif keyp == 'y':
+		elif keyp == 'y' and position<100:
 			position +=step
 			pi2go.setServo(position)
 			print 'Servo Position +', step, '=', position
-		elif keyp == 'u':
+		elif keyp == 'u' and position>0:
 			position -=step
 			pi2go.setServo(position)
 			print 'Servo Position -', step, '=', position
