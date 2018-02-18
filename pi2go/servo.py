@@ -63,19 +63,17 @@ try:
 	pi2go.setServo(15,90)
 	while True:
 		keyp = readkey()
-        if keyp == 'i':
-        	pinServod(15,90)
-        	print 'Servo set to Middle Position'
-    	elif odr(keyp) == 3:
-        	break
-        elif keyp == 'o':
-        	pinServod(15,0)
-        	print 'Servo set to Left Position'
-        elif keyp == 'p':
-        	pinServod(15,180)
-        	print 'Servo set to Right Position'
-        
-
+		if keyp == 'i':
+			pinServod(15,90)
+			print 'Servo set to Middle Position'
+		elif keyp == 'o':
+			pinServod(15,0)
+			print 'Servo set to Left Position'
+		elif keyp == 'p':
+			pinServod(15,180)
+			print 'Servo set to Right Position'
+		elif odr(keyp) == 3:
+			break
 
         # elif keyp == '.' or keyp == '>':
         #     speed = min(100, speed+10)
