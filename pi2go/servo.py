@@ -61,9 +61,8 @@ pi2go.startServod()
 
 try:
 	pi2go.setServo(15,90)
-
-    while True:
-        keyp = readkey()
+	while True:
+		keyp = readkey()
         if keyp == 'i':
         	pinServod(15,90)
             print 'Servo set to Middle Position'
