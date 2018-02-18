@@ -72,6 +72,7 @@ try:
         elif keyp == 'p':
         	pinServod(15,180)
         	print 'Servo set to Right Position'
+        	
     	elif odr(keyp) == 3:
     		break
 
