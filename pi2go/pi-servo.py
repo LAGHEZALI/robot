@@ -10,7 +10,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 # The Raspberry Pi pin 11(GPIO 18) connect to servo signal line(yellow wire)
 # Pin 11 send PWM signal to control servo motion
-GPIO.setup(11, GPIO.OUT)
+GPIO.setup(15, GPIO.OUT)
 
 # menu info
 print "l = move to the left"
