@@ -51,12 +51,12 @@ try:
 		
 		elif keyp == 'y':
 			position +=10
-			pi2go.setServoCycle(cycle)
-			print 'Servo Position ++ = ', cycle
+			pi2go.setServoCycle(position)
+			print 'Servo Position ++ = ', position
 		elif keyp == 'u':
 			position -=10
-			pi2go.setServoCycle(cycle)
-			print 'Servo Position -- = ', cycle
+			pi2go.setServoCycle(position)
+			print 'Servo Position -- = ', position
 		elif keyp == ' ':
 			pi2go.stopServo()
 			print 'Stop Servo'
