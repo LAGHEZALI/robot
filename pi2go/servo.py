@@ -66,6 +66,8 @@ try:
         if keyp == 'i':
         	pinServod(15,90)
         	print 'Servo set to Middle Position'
+    	elif odr(keyp) == 3:
+        	break
         elif keyp == 'o':
         	pinServod(15,0)
         	print 'Servo set to Left Position'
@@ -73,8 +75,7 @@ try:
         	pinServod(15,180)
         	print 'Servo set to Right Position'
         
-        elif odr(keyp) == 3:
-        	break
+
 
         # elif keyp == '.' or keyp == '>':
         #     speed = min(100, speed+10)
