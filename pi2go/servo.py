@@ -15,12 +15,15 @@ p.start(7.5)
 
 def middle():
     p.ChangeDutyCycle(7.5)
+    print("middle")
 
 def left():
     p.ChangeDutyCycle(12.5) 
+    print("left")
 
 def right():
     p.ChangeDutyCycle(2.5)
+    print("right")
 
 try:
     middle()
