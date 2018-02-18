@@ -32,8 +32,8 @@ try:
             middle()
         elif char == ord('o'):
             left()
-		elif char == ord('p'):
-            right()
+        elif char == ord('p'):
+        	right()
 
 finally:
     curses.nocbreak();screen.keypad(0); curses.echo()
