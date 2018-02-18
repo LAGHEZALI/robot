@@ -566,4 +566,6 @@ def setServo(radius):
     elif radius>100:
         servo.ChangeDutyCycle(12.5)
     else:
-        servo.ChangeDutyCycle(radius*0.095+3)
+        r = radius*0.095+3
+        print 'r = ', r
+        servo.ChangeDutyCycle(r)
