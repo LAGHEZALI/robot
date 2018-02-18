@@ -143,7 +143,7 @@ ServosActive = False
 #
 # init(). Initialises GPIO pins, switches motors and LEDs Off, etc
 def init():
-    global p, q, a, b, pwm, pcfADC, PGType
+    global p, q, a, b, servo, pwm, pcfADC, PGType
     PGType = PGFull
     # Initialise the PCA9685 PWM device using the default address
     try:
