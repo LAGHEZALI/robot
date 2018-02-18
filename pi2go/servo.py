@@ -23,7 +23,7 @@ def right():
     p.ChangeDutyCycle(2.5)
 
 try:
-    stop()
+    middle()
     while True:
         char = screen.getch()
         if char == ord(' '):
