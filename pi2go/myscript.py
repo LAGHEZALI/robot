@@ -91,10 +91,7 @@ try:
         elif keyp == 't':
             pi2go.stopServo()
             print 'Stop Servo'
-
-        elif odr(keyp) == 3:
-            break
-
 except KeyboardInterrupt:
+    pi2go.stop()
     pi2go.stopServo()
     pi2go.cleanup()
