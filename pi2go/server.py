@@ -26,7 +26,7 @@ while True:
                         if not data:
                                 break
                         pi2go.setServo(int(data))
-                        print 'Servo Position ', step, '=', position
+                        print 'Servo Position', '=', position
         except KeyboardInterrupt:
                 pi2go.stopServo()
                 pi2go.cleanup()
