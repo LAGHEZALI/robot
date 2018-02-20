@@ -2,10 +2,9 @@ import pi2go, time
 import sys
 import tty
 import termios
-
 from socket import *
 
-Servomotor.setup()
+pi2go.init()
 
 HOST = ''
 PORT = 21567
@@ -15,8 +14,6 @@ ADDR = (HOST,PORT)
 tcpSerSock = socket(AF_INET, SOCK_STREAM)
 tcpSerSock.bind(ADDR)
 tcpSerSock.listen(5)
-
-pi2go.init()
 
 while True:
         print 'Waiting for connection'
