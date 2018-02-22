@@ -103,10 +103,10 @@ PGType = PGNone # Set to None until we find out which during init()
 
 # Pins 24, 26 Left Motor
 # Pins 19, 21 Right Motor
-L1 = 11
-L2 = 13
-R1 = 16
-R2 = 18
+L1 = 7
+L2 = 11
+R1 = 13
+R2 = 15
 
 # Define obstacle sensors and line sensors
 irFL = 7
