@@ -41,16 +41,16 @@ pi2go.init()
 try:
     while True:
         keyp = readkey()
-        if keyp == 'w':
+        if keyp == 'w' or keyp == UP:
             pi2go.forward(speed)
             print 'Forward', speed
-        elif keyp == 's':
+        elif keyp == 's' or keyp == DOWN:
             pi2go.reverse(speed)
             print 'Backward', speed
-        elif keyp == 'd':
+        elif keyp == 'd' or keyp == RIGHT:
             pi2go.spinRight(speed)
             print 'Spin Right', speed
-        elif keyp == 'a':
+        elif keyp == 'a' or keyp == LEFT:
             pi2go.spinLeft(speed)
             print 'Spin Left', speed
 
